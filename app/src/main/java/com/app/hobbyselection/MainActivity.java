@@ -24,49 +24,53 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // 從介面佈局檔取得介面元件
-        /*
-        if(mChkBoxMusic.setOnCheckedChangeListener()) {
 
-        }
-        mChkBoxSing.setOnClickListener(btnOkOnClick);
-        mChkBoxDance.setOnClickListener(btnOkOnClick);
-        mChkBoxTravel.setOnClickListener(btnOkOnClick);
-        mChkBoxReading.setOnClickListener(btnOkOnClick);
-        mChkBoxWriting.setOnClickListener(btnOkOnClick);
-        mChkBoxClimbing.setOnClickListener(btnOkOnClick);
-        mChkBoxSwim.setOnClickListener(btnOkOnClick);
-        mChkBoxExercise.setOnClickListener(btnOkOnClick);
+
+        mChkBoxSing=findViewById(R.id.chkBoxSing);
+        mChkBoxDance=findViewById(R.id.chkBoxDance);
+        mChkBoxTravel=findViewById(R.id.chkBoxTravel);
+        mChkBoxReading=findViewById(R.id.chkBoxReading);
+        mChkBoxWriting=findViewById(R.id.chkBoxWriting);
+        mChkBoxClimbing=findViewById(R.id.chkBoxClimbing);
+        mChkBoxSwim=findViewById(R.id.chkBoxSwim);
+        mChkBoxExercise=findViewById(R.id.chkBoxExercise);
         mChkBoxFitness = findViewById(R.id.chkBoxFitness);
         mChkBoxPhoto = findViewById(R.id.chkBoxPhoto);
         mChkBoxFood = findViewById(R.id.chkBoxFood);
         mChkBoxPainting = findViewById(R.id.chkBoxPainting);
 
 
-         */
 
-        mBtnOK = findViewById(R.id.btnOk);
+
+        //mChkBoxPhoto = findViewById(R.id.chkBoxPhoto);
+        //mBtnOK = findViewById(R.id.btnOk);
         mTxtHobby = findViewById(R.id.txtHobby);
 
         // 設定Button的事件listener
 
        // mBtnOK.setOnClickListener(btnOkOnClick);
         //onCheckboxClicked(mChkBoxSing);
+       // mChkBoxSing.setOnCheckedChangeListener(checkBoxOnClick);
         mChkBoxSing.setOnCheckedChangeListener(checkBoxOnClick);
+        mChkBoxDance.setOnCheckedChangeListener(checkBoxOnClick);
+        mChkBoxTravel.setOnCheckedChangeListener(checkBoxOnClick);
+        mChkBoxReading.setOnCheckedChangeListener(checkBoxOnClick);
+        mChkBoxWriting.setOnCheckedChangeListener(checkBoxOnClick);
+        mChkBoxClimbing.setOnCheckedChangeListener(checkBoxOnClick);
+        mChkBoxSwim.setOnCheckedChangeListener(checkBoxOnClick);
+        mChkBoxExercise.setOnCheckedChangeListener(checkBoxOnClick);
+        mChkBoxFitness.setOnCheckedChangeListener(checkBoxOnClick);
+        mChkBoxPhoto.setOnCheckedChangeListener(checkBoxOnClick);
+        mChkBoxFood.setOnCheckedChangeListener(checkBoxOnClick);
+        mChkBoxPainting.setOnCheckedChangeListener(checkBoxOnClick);
+       // mChkBoxSing.
     }
-    private CompoundButton.OnCheckedChangeListener checkBoxOnClick;
-    //checkBoxOnClick
-    private CompoundButton.OnCheckedChangeListener checkBoxOnClick(){
-
-    }
-
-
-
-    private View.OnClickListener btnOkOnClick = new View.OnClickListener() {
+    private CompoundButton.OnCheckedChangeListener checkBoxOnClick = new CompoundButton.OnCheckedChangeListener() {
         @Override
-        public void onClick(View view) {
+        public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
             String s = getString(R.string.your_hobby);
             CheckBox chk;
-
 
             int[] ids={R.id.chkBoxMusic ,R.id.chkBoxSing ,R.id.chkBoxDance ,R.id.chkBoxTravel ,R.id.chkBoxReading ,R.id.chkBoxWriting ,R.id.chkBoxClimbing ,
                     R.id.chkBoxSwim ,R.id.chkBoxExercise ,R.id.chkBoxFitness ,R.id.chkBoxPhoto ,R.id.chkBoxFood ,R.id.chkBoxPainting };
@@ -82,6 +86,9 @@ public class MainActivity extends AppCompatActivity {
 
             // 顯示勾選的興趣項目
             mTxtHobby.setText(s);
+
         }
     };
+    //checkBoxOnClick
+
 }

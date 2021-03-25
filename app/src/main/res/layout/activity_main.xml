@@ -117,13 +117,6 @@
                 android:textSize="30sp"
                 android:text="@string/painting" />
 
-            <Button
-                android:id="@+id/btnOk"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/ok"
-                android:textSize="18sp" />
-
             <TextView
                 android:id="@+id/txtHobby"
                 android:layout_width="match_parent"
